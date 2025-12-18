@@ -1,24 +1,7 @@
-// Automobile come Object Literal
-const Automobile = {
-    marca: "Ferrari",
-    modello: "Roma",
-    anno: 2024,
-    colore: "Rosso",
-    km: 0,
-    descrivi() {
-        console.log(
-            this.marca + " " +
-            this.modello +
-            ", anno " + this.anno +
-            ", colore " + this.colore
-            );
-    },
-    guida(kmPercorsi) {
-        this.km += kmPercorsi;
-        console.log("Hai guidato per " + kmPercorsi + " km. Totale: " + this.km + " km.");
-    },
-    cambiaColore(nuovoColore) {
-        this.colore = nuovoColore;
-        console.log("Nuovo colore impostato: " + this.colore);
-  }
-};
+let autombile = {
+    marca : "fiat", modello :"panda", colore :"nero", anno : "2010", km : "2500",
+    descrizione(){
+    console.log(`la macchina ${this.marca}, modello ${this.modello}, di colore ${this.colore} ed anno ${this.anno}, ha percorso ${this.km}km`)
+    }
+}
+autombile.descrizione();
