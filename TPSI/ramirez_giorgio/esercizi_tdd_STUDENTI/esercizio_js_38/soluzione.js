@@ -1,4 +1,7 @@
 export const reverse = (l) => {
-    //INSERISCI QUI IL TUO CODICE
+    let numeri = [1,2,3]
+    numeri.sort((a, b) => {
+        return b - a; 
+    });
+    return numeri
 };
-
