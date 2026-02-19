@@ -1,7 +1,7 @@
 export const reverse = (l) => {
-    let numeri = [1,2,3]
-    numeri.sort((a, b) => {
-        return b - a; 
-    });
-    return numeri
+    let lnuovo = []
+    for(let el of l){
+        lnuovo.unshift(el)
+    }
+    return lnuovo
 };
