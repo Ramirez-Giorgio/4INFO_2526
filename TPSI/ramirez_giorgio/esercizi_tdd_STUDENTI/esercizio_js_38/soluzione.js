@@ -4,4 +4,4 @@ export const reverse = (l) => {
         lnuovo.unshift(el)
     }
     return lnuovo
-};
+}
