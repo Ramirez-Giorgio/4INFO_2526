@@ -1,3 +1,3 @@
 export const ordina = (l) => {
-    //INSERISCI QUI IL TUO CODICE
+    return l.sort((el1,el2) => el2.title.localeCompare(el1.title))
 };
