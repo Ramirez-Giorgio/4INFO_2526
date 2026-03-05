@@ -1,3 +1,4 @@
 export const same = (arr1, arr2) => {
-   return arr1.lenght === arr2.lenght && arr1.reduce((a,e,i) => a && (e === arr2[i]),true);
+  if (arr1.length !== arr2.length) return false;
+  return arr1.every((val, index) => val === arr2[index]);
 }
