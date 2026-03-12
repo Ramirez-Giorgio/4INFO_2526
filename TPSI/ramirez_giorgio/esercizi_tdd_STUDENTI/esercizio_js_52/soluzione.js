@@ -1,3 +1,8 @@
 export const psw_gen = (len) => {
-    //INSERISCI QUI IL TUO CODICE
+    let psw = []
+    while(psw.length != len){
+        let ran = Math.floor(Math.random()*(48-122)+122);
+        ran < 58 || (ran > 64 && ran <91) || ran > 96 ? psw.push(String.fromCharCode(ran)) : null;
+    }
+    return psw;
 };

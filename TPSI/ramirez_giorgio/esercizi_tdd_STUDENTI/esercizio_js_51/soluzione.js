@@ -1,3 +1,3 @@
 export const dec_to_bin = (n) => {
-   //INSERISCI QUI IL TUO CODICE
+   return n.split('').reverse().reduce((acc,e,i) => acc + ((2 **i )*e),0)
 };

@@ -1,3 +1,4 @@
 export const avg_age = (l) => {
-    //INSERISCI QUI IL TUO CODICE
+    const sommaEta = l.reduce((acc, studente) => {return acc + studente.eta}, 0);
+    return sommaEta / l.length;
 };
