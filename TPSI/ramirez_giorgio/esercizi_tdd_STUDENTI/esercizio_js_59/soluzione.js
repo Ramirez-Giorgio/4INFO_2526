@@ -1,3 +1,3 @@
 export function deduplicate(arr) {
-    //INSERISCI QUI IL TUO CODICE
+    return Array.from(new Set(arr))
 }
