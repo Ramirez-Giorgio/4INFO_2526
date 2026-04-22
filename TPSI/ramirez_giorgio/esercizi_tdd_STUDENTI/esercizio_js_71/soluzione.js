@@ -44,32 +44,26 @@ export class Ottagono extends Poligono {
     constructor(lato) { super(lato, 8, 1.207); }
 }
 
-console.log("Triangolo Equilatero lato 15 cm ");
 let tri = new TriangoloEquilatero(15);
 tri.perimetro();
 tri.area();
 
-console.log("\nQuadratlato lato 10 cm");
 let qua = new Quadrato(10);
 qua.perimetro();
 qua.area();
 
-console.log("\nPentagono lato 21 cm");
 let pen = new Pentagono(21);
 pen.perimetro();
 pen.area();
 
-console.log("\nEsagono lato 18 cm");
 let esa = new Esagono(18);
 esa.perimetro();
 esa.area();
 
-console.log("\nEttagono lato 9 cm");
 let ett = new Ettagono(9);
 ett.perimetro();
 ett.area();
 
-console.log("\nOttagono lato 12 cm");
 let ott = new Ottagono(12);
 ott.perimetro();
 ott.area();
