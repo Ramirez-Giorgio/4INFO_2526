@@ -2,7 +2,6 @@ class Calcolatrice{
     constructor(str){
         this.stringa = str
     }
-
     converti(){
         let opAtt = "+"
         let espr  = []
@@ -18,7 +17,6 @@ class Calcolatrice{
         })
         return this.calcola(espr)
     }
-
     calcola(espr){
     const ris = espr.reduce((acc, current) => {
         if (current.operazione === '+') {
