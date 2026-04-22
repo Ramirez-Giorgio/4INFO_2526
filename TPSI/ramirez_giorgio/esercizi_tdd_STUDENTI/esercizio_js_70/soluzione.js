@@ -1,23 +1,44 @@
-export class Calcolatrice {
-    somma(a, b) { return a + b; }
-    sottrazione(a, b) { return a - b; }
-    moltiplicazione(a, b) { return a * b; }
-    divisione(a, b) { 
-        if (b === 0) throw new Error("Divisione per zero");
-        return a / b; 
+class Calcolatrice{
+    constructor(str){
+        this.stringa = str
+    }
+
+    converti(){
+        let currentOp = "+"
+        let espressione  = []
+        this.stringa.split(" ").forEach(el => {
+        if (!isNaN(el) && el !== " "){
+            espressione.push({
+                val: Number(el),
+                op: currentOp
+            });
+        }
+        else if (["+", "-", "*", "/"].includes(el)){
+            currentOp = el}
+        })
+        return this.calcola(espressione)
+    }
+
+    calcola(espressione){
+    const ris = espressione.reduce((acc, current) => {
+        if (current.op === '+') {
+            return acc + current.val;
+        } else if (current.op === '-') {
+         return acc - current.val;
+        } else if (current.op === '*') {
+            return acc * current.val;
+        } else if (current.op === '/') {
+            return acc / current.val;
+        }   
+        return acc;
+        }, 0)
+        return ris
     }
 }
 
-const calc = new Calcolatrice();
-
-const espressioni = [
-    "6 - 2^* 5 + 8 / 4",
-    "11^* 3 + 5 - 5 / 11",
-    "29 + 2 + (-7) / 2 + 1^* 2" 
-];
-
-console.log("RISULTATI CALCOLATRICE (Senza precedenze):");
-espressioni.forEach(espr => {
-        const res = calc.eseguiEspressione(espr);
-        console.log(`${espr} = ${res}`);
-});
+calc = new Calcolatrice("6 - 2 * 5 + 8 / 4")
+console.log(calc.converti())
+calc = new Calcolatrice("11 * 3 + 5 - 5 / 11")
+console.log(calc.converti())
+calc = new Calcolatrice("29 + 2 - 7 / 3 / 2 + 1 * 2")
+console.log(calc.converti())
