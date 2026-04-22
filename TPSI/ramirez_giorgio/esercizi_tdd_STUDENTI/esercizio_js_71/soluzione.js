@@ -1,19 +1,19 @@
 export class Poligono {
-   constructor(lato, nlati, nfisso) {
-      this.lato = lato;
+   constructor(cm, nlati, nfisso) {
+      this.cm = cm;
       this.nlati = nlati;
       this.nfisso = nfisso;   
    }
 
    perimetro() {
-      let p = this.lato * this.nlati;
+      let p = this.cm * this.nlati;
       console.log(`Perimetro: ${p} cm`);  
       return p;
    }
 
    area() {
-      let p = this.lato * this.nlati;
-      let apotema = this.lato * this.nfisso;
+      let p = this.cm * this.nlati;
+      let apotema = this.cm * this.nfisso;
       let a = (p * apotema) / 2;
       console.log(`Area: ${Math.round(a)} cm^2`);
       return a;
@@ -21,27 +21,27 @@ export class Poligono {
 }
 
 export class TriangoloEquilatero extends Poligono {
-    constructor(lato) { super(lato, 3, 0.289); }
+    constructor(cm) { super(cm, 3, 0.289); }
 }
 
 export class Quadrato extends Poligono {
-    constructor(lato) { super(lato, 4, 0.5); }
+    constructor(cm) { super(cm, 4, 0.5); }
 }
 
 export class Pentagono extends Poligono {
-    constructor(lato) { super(lato, 5, 0.688); }
+    constructor(cm) { super(cm, 5, 0.688); }
 }
 
 export class Esagono extends Poligono {
-    constructor(lato) { super(lato, 6, 0.866); }
+    constructor(cm) { super(cm, 6, 0.866); }
 }
 
 export class Ettagono extends Poligono {
-    constructor(lato) { super(lato, 7, 1.038); }
+    constructor(cm) { super(cm, 7, 1.038); }
 }
 
 export class Ottagono extends Poligono {
-    constructor(lato) { super(lato, 8, 1.207); }
+    constructor(cm) { super(cm, 8, 1.207); }
 }
 
 let tri = new TriangoloEquilatero(15);
