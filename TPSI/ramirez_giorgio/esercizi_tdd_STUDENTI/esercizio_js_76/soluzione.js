@@ -11,7 +11,7 @@ export class Orario {
         const totalSeconds1 = this.toSeconds();
         const totalSeconds2 = otherTime.toSeconds();
         const diffInSeconds = Math.abs(totalSeconds1 - totalSeconds2);
-        const hours = Math.floor(diffInSeconds / 3600);
+       const hours = Math.floor(diffInSeconds / 3600);
         const minutes = Math.floor((diffInSeconds % 3600) / 60);
         const seconds = diffInSeconds % 60;
 
@@ -40,4 +40,3 @@ const result2 = time3.calculateDifference(time4);
 
 console.log(`Diff in seconds: ${result2.diffInSeconds}`);
 console.log(`Diff formattata: ${result2.formattedDiff}`);
-

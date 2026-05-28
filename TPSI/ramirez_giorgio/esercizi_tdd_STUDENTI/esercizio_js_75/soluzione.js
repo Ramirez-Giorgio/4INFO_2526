@@ -11,6 +11,7 @@ export class Animale extends Enumera {
         this.nome = nome;
         this.eta = eta;
     }
+
     verso() {
         console.log(`${this.nome} sta facendo un verso.`);
     }

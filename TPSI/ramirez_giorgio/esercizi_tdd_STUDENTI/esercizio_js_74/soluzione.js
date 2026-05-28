@@ -30,3 +30,6 @@ parcoAuto.forEach((auto, index) => {
     auto.accendi();
     auto.percorriKm(100);
 });
+
+
+
